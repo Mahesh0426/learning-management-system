@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Reset and base styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .content-wrapper {
+        display: flex;
+        flex-grow: 1;
+      }
+      /* Updated Sidebar styles */
+      .sidebar {
+        width: 250px;
+        background-color: #4a90e2;
+        padding: 20px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sidebar-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .sidebar-header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .sidebar-header p {
+        font-size: 16px;
+      }
+
+      .student-name {
+        font-weight: bold;
+        color: #ffd700;
+      }
+
+      .sidebar-nav {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+
+      .sidebar-nav li {
+        margin-bottom: 15px;
+      }
+
+      .sidebar-nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .sidebar-nav a:hover {
+        background-color: #4a90e2;
+      }
+
+      /* Main content styles */
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+        background-color: #f0f8ff;
+        overflow-y: auto;
+      }
+
+      /* Student Dashboard Styles */
+      .student-dashboard {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .student-dashboard header {
+        background-color: #4a90e2;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .student-dashboard h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .student-dashboard .student-name {
+        font-weight: bold;
+        color: #ffd700;
+      }
+
+      .student-dashboard section {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .student-dashboard h2 {
+        color: #4a90e2;
+        border-bottom: 2px solid #4a90e2;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+      }
+
+      .student-dashboard ul {
+        list-style-type: none;
+      }
+
+      .student-dashboard li {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #e6f2ff;
+        border-radius: 5px;
+      }
+
+      .progress-bar {
+        background-color: #e0e0e0;
+        height: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .progress {
+        background-color: #4caf50;
+        height: 100%;
+        color: white;
+        text-align: center;
+        line-height: 20px;
+        transition: width 0.5s ease-in-out;
+      }
+
+      .recommendations li {
+        border-left: 4px solid #ffd700;
+      }
+
+      .recent-activity li {
+        border-left: 4px solid #4a90e2;
+      }
+
+      .see-more {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .see-more:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- logo | HOME -->
+      <div class="nav-container">
+        <div class="logo">LearnX</div>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar" />
+          <button class="search-button">serach</button>
+        </div>
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/Design/students.html">For Students</a></li>
+          <li><a href="/Design/educator.html">For Educators</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="login.html">login</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h3>Student Dashboard</h3>
+          <p>Welcome back, <span class="student-name">Alex</span>!</p>
+        </div>
+        <nav>
+          <ul class="sidebar-nav">
+            <li><a href="studentProfile.html">Update Info</a></li>
+            <li><a href="analytics.html">My Performance</a></li>
+            <li><a href="recommendation.html">More Recommendations</a></li>
+            <li><a href="#logout">Logout</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <div class="student-dashboard">
+          <section class="recommendations">
+            <h2>Personalized Learning Recommendations</h2>
+            <ul>
+              <li>Review Chapter 5: HTML Basics</li>
+              <li>Practice Essay Writing: Blog on CSS</li>
+              <li>Watch Video: Introduction to programming</li>
+            </ul>
+            <a href="recommendation.html" class="see-more"
+              >See More Recommendations</a
+            >
+          </section>
+
+          <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+              <li>Completed Quiz: web development (Score: 85%)</li>
+              <li>Submitted Assignment: Documentation on Web</li>
+              <li>Watched Video: Advanced Web Course</li>
+            </ul>
+          </section>
+
+          <section class="progress-summary">
+            <h2>Progress Summary</h2>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%">75% Complete</div>
+            </div>
+            <ul>
+              <li>Html: 80% complete</li>
+              <li>CSS: 70% complete</li>
+              <li>Javascript: 75% complete</li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

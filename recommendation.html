@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* styles.css */
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f7f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #3498db;
+        color: white;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 0.3rem;
+      }
+
+      header p {
+        opacity: 0.8;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 2rem;
+      }
+
+      section {
+        margin-bottom: 3rem;
+      }
+
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .recommendation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .recommendation-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .recommendation-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .recommendation-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .recommendation-card h3 {
+        font-size: 1.2rem;
+        margin: 1rem;
+      }
+
+      .recommendation-card p {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0 1rem 1rem;
+      }
+
+      .card-actions {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary {
+        background-color: #3498db;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #2980b9;
+      }
+
+      .btn-secondary {
+        background-color: #ecf0f1;
+        color: #34495e;
+      }
+
+      .btn-secondary:hover {
+        background-color: #bdc3c7;
+      }
+
+      .recommendation-list {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .resource-item {
+        padding: 1rem;
+        border-bottom: 1px solid #ecf0f1;
+      }
+
+      .resource-item:last-child {
+        border-bottom: none;
+      }
+
+      .btn-text {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .btn-text:hover {
+        text-decoration: underline;
+      }
+
+      .activity-timeline {
+        position: relative;
+        padding-left: 2rem;
+      }
+
+      .activity-timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #3498db;
+      }
+
+      .activity-item {
+        position: relative;
+        margin-bottom: 1.5rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+      }
+
+      .activity-icon {
+        position: absolute;
+        left: -2.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2rem;
+        height: 2rem;
+        background-color: #3498db;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .activity-content {
+        padding-left: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .recommendation-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .card-actions {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+
+        .activity-timeline {
+          padding-left: 1.5rem;
+        }
+
+        .activity-icon {
+          left: -2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personalized Learning Recommendations</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <header>
+          <h1>Your Learning Recommendations</h1>
+          <p>Personalized suggestions based on your interests and progress</p>
+        </header>
+
+        <main>
+          <section id="courses">
+            <h2>Recommended Courses</h2>
+            <div class="recommendation-grid">
+              <div class="recommendation-card">
+                <img
+                  src="https://tse3.mm.bing.net/th?id=OIP.fmQlDjndHsAzqas4gPGgpAHaEK&pid=Api&P=0&h=180"
+                  alt="Introduction to Python"
+                />
+                <h3>Introduction to Python</h3>
+                <p>Learn the basics of Python programming</p>
+                <div class="card-actions">
+                  <button class="btn-primary">Start Course</button>
+                  <button class="btn-secondary save-btn">Save</button>
+                </div>
+              </div>
+              <div class="recommendation-card">
+                <img
+                  src="https://tse3.mm.bing.net/th?id=OIP.XEVySEbxw-4iDmSXLsd8NgHaDt&pid=Api&P=0&h=180"
+                  alt="Web Development Fundamentals"
+                />
+                <h3>Web Development Fundamentals</h3>
+                <p>Master HTML, CSS, and JavaScript</p>
+                <div class="card-actions">
+                  <button class="btn-primary">Start Course</button>
+                  <button class="btn-secondary save-btn">Save</button>
+                </div>
+              </div>
+              <!-- Add more course cards as needed -->
+            </div>
+          </section>
+
+          <section id="resources">
+            <h2>Recommended Resources</h2>
+            <div class="recommendation-list">
+              <div class="resource-item">
+                <h3>Python Cheat Sheet</h3>
+                <p>Quick reference guide for Python syntax</p>
+                <a href="#" class="btn-text">Download PDF</a>
+              </div>
+              <div class="resource-item">
+                <h3>Web Design Best Practices</h3>
+                <p>Article on creating effective web layouts</p>
+                <a href="#" class="btn-text">Read Article</a>
+              </div>
+              <!-- Add more resource items as needed -->
+            </div>
+          </section>
+
+          <section id="activities">
+            <h2>Suggested Activities</h2>
+            <div class="activity-timeline">
+              <div class="activity-item">
+                <div class="activity-icon">🏆</div>
+                <div class="activity-content">
+                  <h3>Complete Python Challenge</h3>
+                  <p>Test your skills with a coding challenge</p>
+                  <button class="btn-secondary">Start Challenge</button>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon">👥</div>
+                <div class="activity-content">
+                  <h3>Join Web Dev Study Group</h3>
+                  <p>Collaborate with peers on a project</p>
+                  <button class="btn-secondary">Join Group</button>
+                </div>
+              </div>
+              <!-- Add more activity items as needed -->
+            </div>
+          </section>
+        </main>
+      </body>
+    </html>
+  </body>
+</html>

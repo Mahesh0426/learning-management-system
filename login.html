@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden; /* Ensures rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-column {
+        flex: 1; /* Takes up half of the container */
+      }
+
+      .image-column img {
+        width: 100%; /* Full width of the column */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .form-column {
+        flex: 1; /* Takes up half of the container */
+        padding: 2rem;
+      }
+
+      .signup-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .signup-form label {
+        margin-bottom: 5px;
+      }
+
+      .signup-form input {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .btn {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Stack columns on smaller screens */
+        }
+
+        .image-column,
+        .form-column {
+          width: 100%; /* Full width for both columns */
+        }
+
+        .form-column {
+          padding: 1rem; /* Adjust padding for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="image-column">
+          <img src="assets/login.png" alt="Sign Up Image" />
+        </div>
+        <div class="form-column">
+          <form class="signup-form">
+            <h2>Sign up</h2>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <button type="submit" class="btn">login</button>
+            <p>don't have account? <a href="signup.html">Signin</a></p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

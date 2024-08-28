@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* student-profile.css */
+
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #e8f4f8;
+        margin: 0;
+        padding: 0;
+      }
+
+      .profile-container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      header {
+        background-color: #4a90e2;
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .profile-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        margin-bottom: 15px;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-top: 0;
+      }
+
+      .profile-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background-color: #f0f8ff;
+      }
+
+      .profile-nav li {
+        flex: 1;
+      }
+
+      .profile-nav a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #4a90e2;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .profile-nav a:hover,
+      .profile-nav a.active {
+        background-color: #4a90e2;
+        color: #fff;
+      }
+
+      .profile-section {
+        padding: 25px;
+        display: none;
+      }
+
+      .profile-section.active {
+        display: block;
+      }
+
+      form {
+        display: grid;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: bold;
+        color: #4a90e2;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      input:focus,
+      select:focus {
+        border-color: #4a90e2;
+        outline: none;
+      }
+
+      button {
+        background-color: #4a90e2;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #3a7bc8;
+      }
+
+      .performance-chart {
+        background-color: #f0f8ff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .performance-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .performance-list li {
+        background-color: #f0f8ff;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: transform 0.2s;
+      }
+
+      .performance-list li:hover {
+        transform: translateX(5px);
+      }
+
+      @media (max-width: 600px) {
+        .profile-nav ul {
+          flex-direction: column;
+        }
+
+        .profile-nav li {
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student Profile</title>
+        <link rel="stylesheet" href="profile-styles.css" />
+      </head>
+      <body>
+        <div class="profile-container student-profile">
+          <header>
+            <h1>Student Profile</h1>
+            <img
+              src="student-avatar.jpg"
+              alt="Student Avatar"
+              class="profile-avatar"
+            />
+            <h2>Alex Johnson</h2>
+          </header>
+
+          <nav class="profile-nav">
+            <ul>
+              <li><a href="#personal-info" class="active">Personal Info</a></li>
+              <li><a href="#learning-preferences">Learning Preferences</a></li>
+              <li><a href="#performance-history">Performance History</a></li>
+            </ul>
+          </nav>
+
+          <main>
+            <section id="personal-info" class="profile-section active">
+              <h3>Personal Information</h3>
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="Alex Johnson" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="alex@example.com" />
+
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" value="10th" />
+
+                <button type="submit">Update Information</button>
+              </form>
+            </section>
+
+            <section id="learning-preferences" class="profile-section">
+              <h3>Learning Preferences</h3>
+              <form>
+                <label>Preferred Learning Style:</label>
+                <select>
+                  <option>Visual</option>
+                  <option>Auditory</option>
+                  <option>Kinesthetic</option>
+                </select>
+
+                <label>Preferred Study Time:</label>
+                <select>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                </select>
+
+                <button type="submit">Save Preferences</button>
+              </form>
+            </section>
+
+            <section id="performance-history" class="profile-section">
+              <h3>Performance History</h3>
+              <div class="performance-chart">
+                <!-- Placeholder for performance chart -->
+                [Performance Chart]
+              </div>
+              <ul class="performance-list">
+                <li>Math: A (95%)</li>
+                <li>Science: B+ (88%)</li>
+                <li>English: A- (92%)</li>
+                <li>History: B (85%)</li>
+              </ul>
+            </section>
+          </main>
+        </div>
+        <script src="profile-script.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

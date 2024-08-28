@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Catalog</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      main {
+        padding: 2rem;
+      }
+
+      .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .course-card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .course-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .course-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .course-card h2 {
+        font-size: 1.5rem;
+        margin: 1rem;
+      }
+
+      .course-card p {
+        margin: 0 1rem 1rem;
+        color: #666;
+      }
+
+      .btn {
+        display: block;
+        width: 90%;
+        margin: 1rem auto;
+        padding: 0.8rem;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        .course-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- logo | HOME -->
+      <div class="nav-container">
+        <div class="logo">LearnX</div>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar" />
+          <button class="search-button">serach</button>
+        </div>
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/Design/students.html">For Students</a></li>
+          <li><a href="/Design/educator.html">For Educators</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="login.html">login</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="course-grid">
+        <div class="course-card">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.5I1uz2hZlzIYSnar7zlx1AHaEK&pid=Api&P=0&h=180"
+            alt="Introduction to Programming"
+          />
+          <h2>Introduction to Programming</h2>
+          <p>Learn the basics of programming with this comprehensive course.</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.xi_VY54V535hztHz11VTyQHaFL&pid=Api&P=0&h=180"
+            alt="Web Development Fundamentals"
+          />
+          <h2>Web Development Fundamentals</h2>
+          <p>Master HTML, CSS, and JavaScript to build modern websites.</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.7u15HtSU5Qfl4p2v_MguHQHaEK&pid=Api&P=0&h=180"
+            alt="Data Science Essentials"
+          />
+          <h2>Data Science Essentials</h2>
+          <p>Explore data analysis, visualization, and machine learning.</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.nOiqIEoh5pcWAY_uRysELAHaDt&pid=Api&P=0&h=180"
+            alt="Mobile App Development"
+          />
+          <h2>Mobile App Development</h2>
+          <p>Create apps for iOS and Android platforms.</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.J7cW4FzgqYxdR6P68oVbLwHaE8&pid=Api&P=0&h=180"
+            alt="Artificial Intelligence"
+          />
+          <h2>Artificial Intelligence</h2>
+          <p>Dive into AI concepts, algorithms, and applications.</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.P7alvjh35y0HxqH9dGbcdQHaEK&pid=Api&P=0&h=180"
+            alt="Cybersecurity Fundamentals"
+          />
+          <h2>Cybersecurity Fundamentals</h2>
+          <p>Learn to protect systems and networks from cyber threats.</p>
+          <a href="#" class="btn">Enroll Now</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Course Catalog. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Educator Dashboard Styles */
+      .educator-dashboard {
+        max-width: 1200px;
+        margin: 20px auto;
+        background-color: #f5f5f5; /* Light grey background */
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .educator-dashboard header {
+        background-color: #3498db; /* Dark blue header */
+        color: white;
+        padding: 25px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .educator-dashboard h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+      }
+
+      .educator-dashboard .educator-name {
+        font-weight: 600;
+        color: #3498db; /* Light blue for educator name */
+      }
+
+      .educator-dashboard section {
+        background-color: white;
+        margin: 20px;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .educator-dashboard h2 {
+        color: #34495e;
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ecf0f1;
+      }
+
+      .educator-dashboard .chart {
+        background-color: #ecf0f1;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-style: italic;
+        color: #7f8c8d;
+      }
+
+      .educator-dashboard table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+
+      .educator-dashboard th,
+      .educator-dashboard td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ecf0f1;
+      }
+
+      .educator-dashboard th {
+        background-color: #3498db;
+        color: white;
+        font-weight: 600;
+      }
+
+      .educator-dashboard tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .educator-dashboard .at-risk-students ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .educator-dashboard .at-risk-students li {
+        background-color: #ffecb3; /* Light yellow for attention */
+        margin-bottom: 10px;
+        padding: 12px;
+        border-radius: 5px;
+        border-left: 4px solid #f39c12; /* Orange border */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- logo | HOME -->
+      <div class="nav-container">
+        <div class="logo">LearnX</div>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar" />
+          <button class="search-button">serach</button>
+        </div>
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/Design/students.html">For Students</a></li>
+          <li><a href="/Design/educator.html">For Educators</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="login.html">login</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="dashboard educator-dashboard">
+      <header>
+        <h1>Educator Dashboard</h1>
+        <p>Welcome, <span class="educator-name">Ms. Johnson</span></p>
+      </header>
+
+      <section class="class-performance">
+        <h2>Class Performance Overview</h2>
+        <div class="chart">
+          <!-- Placeholder for a chart showing overall class performance -->
+          [Class Performance Chart]
+        </div>
+      </section>
+
+      <section class="student-engagement">
+        <h2>Student Engagement</h2>
+        <table>
+          <tr>
+            <th>Student</th>
+            <th>Attendance</th>
+            <th>Assignment Completion</th>
+            <th>Participation</th>
+          </tr>
+          <tr>
+            <td>Alex Smith</td>
+            <td>95%</td>
+            <td>88%</td>
+            <td>High</td>
+          </tr>
+          <tr>
+            <td>Emma Johnson</td>
+            <td>100%</td>
+            <td>95%</td>
+            <td>Very High</td>
+          </tr>
+          <!-- More student rows -->
+        </table>
+      </section>
+
+      <section class="at-risk-students">
+        <h2>Students Needing Attention</h2>
+        <ul>
+          <li>John Doe - Low assignment completion rate</li>
+          <li>Sarah Brown - Declining test scores</li>
+          <li>Mike Wilson - Poor attendance</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

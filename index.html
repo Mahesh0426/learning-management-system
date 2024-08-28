@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: #0056b3;
+      }
+
+      #hero {
+        background-image: url("learning-hero.jpg");
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+      }
+
+      .benefit-cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc; /* Optional: border for the card */
+
+        overflow: hidden; /* Ensures the image does not overflow the card */
+        width: 300px; /* Set a width for the card */
+        margin: 20px; /* Space around the card */
+      }
+      img {
+        width: 100%;
+        height: 200px; /* Adjust the height as needed */
+        object-fit: cover; /* Make the image cover the entire card */
+      }
+
+      #students,
+      #educators {
+        background-color: #e9ecef;
+        padding: 50px 0;
+      }
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      #students,
+      #educators {
+        flex: 1; /* Makes both sections take up equal width */
+      }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 768px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
+      #hero {
+        background-image: url(assets/hero.avif);
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+        /* To position the overlay if needed */
+      }
+
+      #hero h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      #hero p {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: rgba(
+          0,
+          123,
+          255,
+          0.7
+        ); /* Semi-transparent background */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: rgba(0, 123, 255, 0.9); /* Darker on hover */
+      }
+      #signup {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 12px 24px;
+
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      footer {
+        background-color: black; /* Black background for the footer */
+        color: white; /* White text color */
+        padding: 20px 0; /* Vertical padding */
+        text-align: center; /* Center text */
+      }
+
+      .footer-container {
+        max-width: 1200px; /* Same max-width as header for consistency */
+        margin: 0 auto; /* Center the footer content */
+        padding: 0 20px; /* Horizontal padding */
+      }
+
+      .footer-links {
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove padding */
+        margin: 10px 0 0; /* Margin on top */
+        display: flex; /* Display links in a row */
+        justify-content: center; /* Center the links */
+      }
+
+      .footer-links li {
+        margin: 0 15px; /* Space between links */
+      }
+
+      .footer-links a {
+        text-decoration: none; /* Remove underline */
+        color: white; /* White text color for links */
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline; /* Underline on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- logo | HOME -->
+      <div class="nav-container">
+        <div class="logo">LearnX</div>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar" />
+          <button class="search-button">serach</button>
+        </div>
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/Design/students.html">For Students</a></li>
+          <li><a href="/Design/educator.html">For Educators</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="login.html">login</a></li>
+        </ul>
+      </div>
+    </header>
+    <section id="hero">
+      <h1>Personalized Recommendation Learning for Everyone</h1>
+      <p>Unlock your potential with tailored education experiences</p>
+      <a href="#signup" class="cta-button">Get Started</a>
+    </section>
+    <section id="benefits">
+      <h2><center>Why Choose Personalized Learning?</center></h2>
+      <div class="benefit-cards">
+        <div class="card">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.KCBb3OnZQWsNWd8JoLIf6gHaD4&pid=Api&P=0&h=180"
+            alt="Adaptive Learning"
+          />
+          <h3>Adaptive Curriculum</h3>
+          <p>Learn at your own pace with content that adjusts to your needs</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://tse3.mm.bing.net/th?id=OIP.YNsP_Ai1KWZbqULgbw5JsgHaGq&pid=Api&P=0&h=180"
+            alt="Track Progress"
+          />
+          <h3>Track Your Progress</h3>
+          <p>Visualize your learning journey with detailed analytics</p>
+        </div>
+        <div class="card">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.f8aDr2JnFc4motwkDQ8Y1gHaDT&pid=Api&P=0&h=180"
+            alt="Increased Engagement"
+          />
+          <h3>Increased Engagement</h3>
+          <p>Stay motivated with interactive and relevant content</p>
+        </div>
+      </div>
+    </section>
+    <div class="flex-container">
+      <section id="students">
+        <h2>For Students</h2>
+        <p>Discover a world of personalized learning tailored just for you</p>
+        <ul>
+          <li>Adaptive lessons that match your learning style</li>
+          <li>Real-time feedback and progress tracking</li>
+          <li>Engaging multimedia content</li>
+        </ul>
+        <a href="#student-signup" class="cta-button">Join as a Student</a>
+      </section>
+
+      <section id="educators">
+        <h2>For Educators</h2>
+        <p>
+          Empower your teaching with data-driven insights and customizable
+          content
+        </p>
+        <ul>
+          <li>Create personalized learning paths for each student</li>
+          <li>Access comprehensive analytics and reporting tools</li>
+          <li>Collaborate with a community of innovative educators</li>
+        </ul>
+        <a href="#educator-signup" class="cta-button">Join as an Educator</a>
+      </section>
+    </div>
+    <section id="signup">
+      <h2>Ready to Transform Your Learning Experience?</h2>
+      <p>
+        Join thousands of students and educators already benefiting from
+        personalized learning
+      </p>
+      <a href="signup.html" class="cta-button">Sign Up Now</a>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; learnX. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
