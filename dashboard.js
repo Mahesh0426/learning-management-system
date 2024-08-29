@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   new Chart(subjectPerformanceCtx, {
     type: "radar",
     data: {
-      labels: ["Math", "Science", "English", "History", "Art"],
+      labels: ["Java", "HTML", "CSS", "javascript", "C#"],
       datasets: [
         {
           label: "Average Score",

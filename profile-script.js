@@ -57,9 +57,4 @@ document.addEventListener("DOMContentLoaded", function () {
       this.reset();
     }
   });
-
-  // You can add more functionality here, such as:
-  // - Fetching and displaying student data
-  // - Implementing the chart in the student data section
-  // - Adding edit/delete functionality for classes and goals
 });
