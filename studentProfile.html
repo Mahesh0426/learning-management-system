@@ -217,19 +217,61 @@
             <section id="learning-preferences" class="profile-section">
               <h3>Learning Preferences</h3>
               <form>
-                <label>Preferred Learning Style:</label>
-                <select>
-                  <option>Visual</option>
-                  <option>Auditory</option>
-                  <option>PDF</option>
-                </select>
+                <div class="form-group">
+                  <label for="learning-interest"
+                    >Preferred Learning Interest:</label
+                  >
+                  <select id="learning-interest" name="learning-interest">
+                    <option value="">
+                      Select your preferred learning interest
+                    </option>
+                    <option value="visual">Visual</option>
+                    <option value="auditory">Auditory</option>
+                    <option value="pdf">PDF</option>
+                  </select>
+                </div>
 
-                <label>Preferred Study Time:</label>
-                <select>
-                  <option>Morning</option>
-                  <option>Afternoon</option>
-                  <option>Evening</option>
-                </select>
+                <div class="form-group">
+                  <label for="study-time">Preferred Study Time:</label>
+                  <select id="study-time" name="study-time">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="skill-level"
+                    >What is your current skill level?</label
+                  >
+                  <select id="skill-level" name="skill-level">
+                    <option value="">Select your skill level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="interests"> MY primary interests</label>
+                  <select id="interests" name="interests" multiple>
+                    <option value="Python">Python</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="machine-learning">Machine Learning</option>
+                    <option value="Artificial Intellengece">
+                      Artificial Intellengece
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="goals">My learning goals</label>
+                  <select id="goals" name="goals" multiple>
+                    <option value="career-change">Career Change</option>
+                    <option value="skill-improvement">Skill Improvement</option>
+                    <option value="personal-interest">Personal Interest</option>
+                  </select>
+                </div>
 
                 <button type="submit">Save Preferences</button>
               </form>
