@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
 
     <style>
       /* student-profile.css */
@@ -26,7 +27,7 @@
         overflow: hidden;
       }
 
-      header {
+      .header2 {
         background-color: #4a90e2;
         color: #fff;
         text-align: center;
@@ -168,133 +169,137 @@
       }
     </style>
   </head>
+
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Student Profile</title>
-        <link rel="stylesheet" href="profile-styles.css" />
-      </head>
-      <body>
-        <div class="profile-container student-profile">
-          <header>
-            <h1>Student Profile</h1>
-            <img
-              src="student-avatar.jpg"
-              alt="Student Avatar"
-              class="profile-avatar"
-            />
-            <h2>Aashiss</h2>
-          </header>
-
-          <nav class="profile-nav">
-            <ul>
-              <li><a href="#personal-info" class="active">Personal Info</a></li>
-              <li><a href="#learning-preferences">Learning Preferences</a></li>
-              <li><a href="#performance-history">Performance History</a></li>
-            </ul>
-          </nav>
-
-          <main>
-            <section id="personal-info" class="profile-section active">
-              <h3>Personal Information</h3>
-              <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" value="aashsis" />
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" value="aashis@example.com" />
-
-                <label for="grade">Contact:</label>
-                <input type="text" id="grade" value="1234567789" />
-
-                <button type="submit">Update Information</button>
-              </form>
-            </section>
-
-            <section id="learning-preferences" class="profile-section">
-              <h3>Learning Preferences</h3>
-              <form>
-                <div class="form-group">
-                  <label for="learning-interest"
-                    >Preferred Learning Interest:</label
-                  >
-                  <select id="learning-interest" name="learning-interest">
-                    <option value="">
-                      Select your preferred learning interest
-                    </option>
-                    <option value="visual">Visual</option>
-                    <option value="auditory">Auditory</option>
-                    <option value="pdf">PDF</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="study-time">Preferred Study Time:</label>
-                  <select id="study-time" name="study-time">
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="skill-level"
-                    >What is your current skill level?</label
-                  >
-                  <select id="skill-level" name="skill-level">
-                    <option value="">Select your skill level</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="interests"> MY primary interests</label>
-                  <select id="interests" name="interests" multiple>
-                    <option value="Python">Python</option>
-                    <option value="data-science">Data Science</option>
-                    <option value="machine-learning">Machine Learning</option>
-                    <option value="Artificial Intellengece">
-                      Artificial Intellengece
-                    </option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="goals">My learning goals</label>
-                  <select id="goals" name="goals" multiple>
-                    <option value="career-change">Career Change</option>
-                    <option value="skill-improvement">Skill Improvement</option>
-                    <option value="personal-interest">Personal Interest</option>
-                  </select>
-                </div>
-
-                <button type="submit">Save Preferences</button>
-              </form>
-            </section>
-
-            <section id="performance-history" class="profile-section">
-              <h3>Performance History</h3>
-              <div class="performance-chart">
-                <!-- Placeholder for performance chart -->
-                [Performance Chart]
-              </div>
-              <ul class="performance-list">
-                <li>HTML: A (95%)</li>
-                <li>CSS: B+ (88%)</li>
-                <li>Javascript: A- (92%)</li>
-                <li>React: B (85%)</li>
-              </ul>
-            </section>
-          </main>
+    <header>
+      <div class="nav-container">
+        <div class="logo">LearnX</div>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar" />
+          <button class="search-button">Search</button>
         </div>
+        <ul class="nav-items">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="students.html">For Students</a></li>
+          <li><a href="educator.html">For Educators</a></li>
+          <li><a href="course.html">Courses</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="profile-container student-profile">
+      <div class="header2">
+        <h1>Student Profile</h1>
+        <img
+          src="https://tse3.mm.bing.net/th?id=OIP.lkH6W80HW9xKnWE9ZkccJwHaHa&pid=Api&P=0&h=180"
+          alt="Student Avatar"
+          class="profile-avatar"
+        />
+        <h2>Aashiss</h2>
+      </div>
 
-        <script src="profile-script.js"></script>
-      </body>
-    </html>
+      <nav class="profile-nav">
+        <ul>
+          <li><a href="#personal-info" class="active">Personal Info</a></li>
+          <li><a href="#learning-preferences">Learning Preferences</a></li>
+          <li><a href="#performance-history">Performance History</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section id="personal-info" class="profile-section active">
+          <h3>Personal Information</h3>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="aashsis" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="aashis@example.com" />
+
+            <label for="grade">Contact:</label>
+            <input type="text" id="grade" value="1234567789" />
+
+            <button type="submit">Update Information</button>
+          </form>
+        </section>
+
+        <section id="learning-preferences" class="profile-section">
+          <h3>Learning Preferences</h3>
+          <form>
+            <div class="form-group">
+              <label for="learning-interest"
+                >Preferred Learning Interest:</label
+              >
+              <select id="learning-interest" name="learning-interest">
+                <option value="">
+                  Select your preferred learning interest
+                </option>
+                <option value="visual">Visual</option>
+                <option value="auditory">Auditory</option>
+                <option value="pdf">PDF</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="study-time">Preferred Study Time:</label>
+              <select id="study-time" name="study-time">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="skill-level">What is your current skill level?</label>
+              <select id="skill-level" name="skill-level">
+                <option value="">Select your skill level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="interests"> MY primary interests</label>
+              <select id="interests" name="interests" multiple>
+                <option value="Python">Python</option>
+                <option value="data-science">Data Science</option>
+                <option value="machine-learning">Machine Learning</option>
+                <option value="Artificial Intellengece">
+                  Artificial Intellengece
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="goals">My learning goals</label>
+              <select id="goals" name="goals" multiple>
+                <option value="career-change">Career Change</option>
+                <option value="skill-improvement">Skill Improvement</option>
+                <option value="personal-interest">Personal Interest</option>
+              </select>
+            </div>
+
+            <button type="submit">Save Preferences</button>
+          </form>
+        </section>
+
+        <section id="performance-history" class="profile-section">
+          <h3>Performance History</h3>
+          <div class="performance-chart">
+            <!-- Placeholder for performance chart -->
+            [Performance Chart]
+          </div>
+          <ul class="performance-list">
+            <li>HTML: A (95%)</li>
+            <li>CSS: B+ (88%)</li>
+            <li>Javascript: A- (92%)</li>
+            <li>React: B (85%)</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="profile-script.js"></script>
   </body>
 </html>

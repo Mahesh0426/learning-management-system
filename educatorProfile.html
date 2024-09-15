@@ -12,6 +12,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Educator Profile</title>
+        <link rel="stylesheet" href="style.css" />
         <style>
           /* educator-profile.css */
 
@@ -33,7 +34,7 @@
             overflow: hidden;
           }
 
-          header {
+          .header1 {
             background-color: #2c3e50;
             color: #fff;
             text-align: center;
@@ -190,19 +191,34 @@
             }
           }
         </style>
-        <link rel="stylesheet" href="profile-styles.css" />
       </head>
       <body>
+        <header>
+          <div class="nav-container">
+            <div class="logo">LearnX</div>
+            <div class="search-container">
+              <input type="text" placeholder="Search..." class="search-bar" />
+              <button class="search-button">Search</button>
+            </div>
+            <ul class="nav-items">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="students.html">For Students</a></li>
+              <li><a href="educator.html">For Educators</a></li>
+              <li><a href="course.html">Courses</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </header>
         <div class="profile-container educator-profile">
-          <header>
+          <div class="header1">
             <h1>Educator Profile</h1>
             <img
-              src="educator-avatar.jpg"
+              src="https://tse2.mm.bing.net/th?id=OIP.zp-OoRgWS7L2cMttsgxRqQHaHa&pid=Api&P=0&h=180"
               alt="Educator Avatar"
               class="profile-avatar"
             />
             <h2>Ms. Bindu</h2>
-          </header>
+          </div>
 
           <nav class="profile-nav">
             <ul>
